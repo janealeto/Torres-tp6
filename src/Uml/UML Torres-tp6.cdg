@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Torres_tp6">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="torres_tp6.Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="apellido" type="String" visibility="package"/>
+        <Field name="ciudad" type="String" visibility="package"/>
+        <Field name="direccion" type="String" visibility="package"/>
+        <Field name="dni" type="Long" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="Long" name="dni"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="getDni" returnType="Long" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Directorio" package="torres_tp6.Entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="clientes" type="TreeMap&lt;Long, Cliente&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarCliente" returnType="int" visibility="public">
+          <Argument type="Long" name="tel"/>
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="buscarCliente" returnType="Cliente" visibility="public">
+          <Argument type="Long" name="tel"/>
+        </Method>
+        <Method name="buscarClienteDni" returnType="TreeMap&lt;Long, Cliente&gt;" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+        <Method name="buscarTelefono" returnType="Set&lt;Long&gt;" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="buscarClientes" returnType="List&lt;Cliente&gt;" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="borrarCliente" returnType="TreeMap&lt;Long, Cliente&gt;" visibility="public">
+          <Argument type="Long" name="dni"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Torres_tp6" package="torres_tp6" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="torres_tp6.View" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="directorio" type="Directorio" visibility="private"/>
+        <Field name="escritorio" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="jMenu1" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu2" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenu3" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="jMenuBar1" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="jMenuItem3" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiAgregarCli" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiBorrarCli" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="jmiBuscarCli" type="javax.swing.JMenuItem" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jmiAgregarCliActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiBuscarCliActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jmiBorrarCliActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="viewAgregarClientes" package="torres_tp6.View" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="directorio" type="Directorio" visibility="private"/>
+        <Field name="jButtonGuardar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonNuevo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButtonSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jtfApellido" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfCiudad" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfDni" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfDomicilio" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfNombre" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfTelefono" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Directorio" name="directorio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jButtonGuardarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButtonNuevoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="viewBorrarClientes" package="torres_tp6.View" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="directorio" type="Directorio" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jbuttonBuscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbuttonEliminar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbuttonSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtfApellido" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfCiudad" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfDni" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfNombre" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfTelefono" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Directorio" name="directorio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jtfTelefonoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jtfCiudadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbuttonBuscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbuttonSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbuttonEliminarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="viewBusquedaClientes" package="torres_tp6.View" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="directorio" type="Directorio" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jbuttonBuscar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jbuttonSalir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jtfApellido" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfCiudad" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfDni" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfNombre" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtfTelefono" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Directorio" name="directorio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="jtfTelefonoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbuttonSalirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jbuttonBuscarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="directorio" source="torres_tp6.View.viewBusquedaClientes" target="torres_tp6.Entidades.Directorio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directorio" source="torres_tp6.View.viewBorrarClientes" target="torres_tp6.Entidades.Directorio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="torres_tp6.Entidades.Directorio" target="torres_tp6.Entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="directorio" source="torres_tp6.View.Menu" target="torres_tp6.Entidades.Directorio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clientes" source="torres_tp6.Entidades.Directorio" target="torres_tp6.Entidades.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="TreeMap&lt;Long, Cliente&gt;"/>
+    <HasRelation name="directorio" source="torres_tp6.View.viewAgregarClientes" target="torres_tp6.Entidades.Directorio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
